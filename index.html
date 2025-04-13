@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cute Crochet Shop</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff0f6;
+      margin: 0;
+      padding: 0;
+      color: #5c2a5d;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffe0f0;
+    }
+    header img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background-color: #fff7fb;
+      border: 2px dashed #f7b8d4;
+      border-radius: 20px;
+      width: 300px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: scale(1.03);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .name {
+      font-size: 1.5em;
+      margin: 10px 0 5px;
+    }
+    .description {
+      font-size: 1em;
+      color: #7a3d7a;
+      margin-bottom: 5px;
+    }
+    .price {
+      font-size: 1.2em;
+      color: #d63384;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .discount {
+      color: #ff69b4;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .buy-button {
+      background-color: #ffb6c1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .buy-button:hover {
+      background-color: #ff8cab;
+    }
+    /* Form Styling */
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
+      background-color: #fff7fb;
+      border: 1px solid #f7b8d4;
+      border-radius: 15px;
+    }
+    form input, form select, form button {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #d63384;
+      border-radius: 10px;
+    }
+    form button {
+      background-color: #ffb6c1;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #ff8cab;
+    }
+    #orderHistory {
+      max-width: 600px;
+      margin: auto;
+      background: #fff7fb;
+      border: 1px solid #f7b8d4;
+      padding: 20px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="coverpage.jpg" alt="Crochet Shop Header" />
+    <h1>Welcome to Comely Cute Crochet Shop!</h1>
+  </header>
+
+  <section class="products">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="picture2.jpg" alt="Cute Bunny in Orange Outfit" />
+      <div class="name">Cute Bunny in Orange Outfit</div>
+      <div class="description">Handmade bunny with pastel yarn.</div>
+      <div class="price">₹1500</div>
+      <div class="discount">10% off on your first order!</div>
+      <a href="upi://pay?pn=MEHICHU%20%20KATH&am=1500&mode=01&pa=mehichu.0273@waicici" target="_blank">
+        <button class="buy-button">Buy Now</button>
+      </a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="picture4.jpg" alt="Kuromi Inspired Tote Bag" />
+      <div class="name">Kuromi Inspired Tote Bag</div>
+      <div class="description">Soft, pastel Kuromi-cute & cozy!</div>
+      <div class="price">₹900</div>
+      <div class="discount">10% off on your first order!</div>
+      <a href="upi://pay?pn=MEHICHU%20%20KATH&am=900&mode=01&pa=mehichu.0273@waicici" target="_blank">
+        <button class="buy-button">Buy Now</button>
+      </a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="picture3.jpg" alt="Compact Mirror/Bag Charm" />
+      <div class="name">Compact Mirror/Bag Charm</div>
+      <div class="description">Soft, sweet and handmade with love.</div>
+      <div class="price">₹300</div>
+      <div class="discount">10% off on your first order!</div>
+      <a href="upi://pay?pn=MEHICHU%20%20KATH&am=300&mode=01&pa=mehichu.0273@waicici" target="_blank">
+        <button class="buy-button">Buy Now</button>
+      </a>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="picture1.jpg" alt="Cinnamnroll Plush" />
+      <div class="name">Cinnamnroll Plush</div>
+      <div class="description">A hug of clouds, crocheted in smiles.</div>
+      <div class="price">₹1250</div>
+      <div class="discount">10% off on your first order!</div>
+      <a href="upi://pay?pn=MEHICHU%20%20KATH&am=1250&mode=01&pa=mehichu.0273@waicici" target="_blank">
+        <button class="buy-button">Buy Now</button>
+      </a>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product">
+      <img src="picture5.jpg" alt="Daisy Tote Bag" />
+      <div class="name">Daisy Tote Bag</div>
+      <div class="description">Crocheted with care, blooming with daisy charm.</div>
+      <div class="price">₹900</div>
+      <div class="discount">10% off on your first order!</div>
+      <a href="upi://pay?pn=MEHICHU%20%20KATH&am=900&mode=01&pa=mehichu.0273@waicici" target="_blank">
+        <button class="buy-button">Buy Now</button>
+      </a>
+    </div>
+  </section>
+
+  <section style="padding: 20px;">
+    <h2 style="text-align:center;">Place Your Order</h2>
+    <form id="orderForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="address" placeholder="House No, Street" required />
+      <input type="text" name="pincode" placeholder="Pincode" required />
+      <input type="text" name="city" placeholder="City" required />
+      <input type="text" name="phone" placeholder="Phone Number" required />
+      <select name="product" required>
+        <option value="">Select Product</option>
+        <option value="Cute Bunny in Orange Outfit">Cute Bunny - ₹1500</option>
+        <option value="Kuromi Inspired Tote Bag">Kuromi Tote - ₹900</option>
+        <option value="Compact Mirror/Bag Charm">Mirror/Charm - ₹300</option>
+        <option value="Cinnamnroll Plush">Cinnamnroll Plush - ₹1250</option>
+        <option value="Daisy Tote Bag">Daisy Tote - ₹900</option>
+      </select>
+      <button type="submit" class="buy-button">Submit Order</button>
+    </form>
+  </section>
+
+  <section style="padding: 20px;">
+    <h2 style="text-align:center;">Order History</h2>
+    <div id="orderHistory"></div>
+  </section>
+
+  <script>
+    const form = document.getElementById('orderForm');
+    const orderHistoryDiv = document.getElementById('orderHistory');
+
+    // Load existing order history on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderOrderHistory();
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const data = new FormData(form);
+      const order = {
+        name: data.get('name'),
+        address: data.get('address'),
+        pincode: data.get('pincode'),
+        city: data.get('city'),
+        phone: data.get('phone'),
+        product: data.get('product'),
+        time: new Date().toLocaleString(),
+      };
+
+      // Save to localStorage
+      let orders = JSON.parse(localStorage.getItem('orders')) || [];
+      orders.push(order);
+      localStorage.setItem('orders', JSON.stringify(orders));
+
+      // Show UPI link
+      const amount = getPrice(order.product);
+      alert(Thanks, ${order.name}! Please complete your payment:\n\nupi://pay?pn=MEHICHU%20%20KATH&am=${amount}&mode=01&pa=mehichu.0273@waicici);
+
+      // Update order history
+      renderOrderHistory();
+
+      // Optional: reset the form
+      form.reset();
+    });
+
+    function getPrice(product) {
+      switch (product) {
+        case "Cute Bunny in Orange Outfit": return 1500;
+        case "Kuromi Inspired Tote Bag": return 900;
+        case "Compact Mirror/Bag Charm": return 300;
+        case "Cinnamnroll Plush": return 1250;
+        case "Daisy Tote Bag": return 900;
+        default: return 0;
+      }
+    }
+
+    function renderOrderHistory() {
+      const orders = JSON.parse(localStorage.getItem('orders')) || [];
+      if (orders.length === 0) {
+        orderHistoryDiv.innerHTML = "<p>No orders yet.</p>";
+        return;
+      }
+
+      orderHistoryDiv.innerHTML = orders.map(order => `
+        <div style="margin-bottom: 15px; padding: 10px; background: #ffe0f0; border-radius: 10px;">
+          <strong>Product:</strong> ${order.product}<br>
+          <strong>Name:</strong> ${order.name}<br>
+          <strong>Address:</strong> ${order.address}, ${order.city} - ${order.pincode}<br>
+          <strong>Phone:</strong> ${order.phone}<br>
+          <strong>Ordered At:</strong> ${order.time}
+        </div>
+      `).join('');
+    }
+  </script>
+</
